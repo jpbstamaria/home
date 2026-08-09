@@ -28,23 +28,27 @@ body {
 header {
   background-color: var(--primary-light);
   color: var(--neutral-card);
-  padding: 2rem;
+  padding: clamp(1rem, 4vw, 2rem);
   border-bottom: 5px solid var(--primary-dark);
+  min-height: clamp(150px, 30vh, 260px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 header h1 {
-  font-size: 2.2rem;
+  font-size: clamp(1.9rem, 4.7vw, 2.8rem);
   font-weight: bold;
   line-height: 1.1;
 }
 
 header .subtitle {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.3vw, 1rem);
   margin-top: 0.2rem;
 }
 
 header .department {
-  font-size: 1rem;
+  font-size: clamp(0.88rem, 2vw, 1rem);
   font-style: italic;
   margin-top: 0.2rem;
 }
@@ -52,9 +56,10 @@ header .department {
 /* Navigation Bar */
 nav {
   background-color: var(--primary-header);
-  padding: 0.8rem 2rem;
+  padding: 0.8rem clamp(1rem, 4vw, 2rem);
   display: flex;
-  gap: 2rem;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -70,14 +75,14 @@ nav a.active {
 
 /* Main Layout Grid */
 .container {
-  padding: 2rem;
+  padding: clamp(1rem, 3vw, 2rem);
   max-width: 1400px;
   margin: 0 auto;
 }
 
 .grid-layout {
   display: grid;
-  grid-template-columns: 2fr 1.02fr;
+  grid-template-columns: minmax(620px, 2fr) minmax(320px, 1.02fr);
   gap: 1.5rem;
 }
 
@@ -161,10 +166,11 @@ nav a.active {
 footer {
   background-color: var(--footer-bg);
   color: #ffffff;
-  padding: 2rem 3rem;
+  padding: clamp(1rem, 4vw, 2rem) clamp(1rem, 5vw, 3rem);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 2rem;
 }
 
 footer h3 {
@@ -185,4 +191,56 @@ footer a:hover {
 footer .copyright {
   font-size: 0.85rem;
   color: var(--neutral-card);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .profile-card img {
+    max-width: min(100%, 320px);
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 15px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 390px) {
+  header {
+    min-height: 100svh;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding: 0.75rem;
+  }
 }
