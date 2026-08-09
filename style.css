@@ -82,7 +82,7 @@ nav a.active {
 
 .grid-layout {
   display: grid;
-  grid-template-columns: minmax(620px, 2fr) minmax(320px, 1.02fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
@@ -195,10 +195,6 @@ footer .copyright {
 
 /* Responsive Breakpoints */
 @media (max-width: 900px) {
-  .grid-layout {
-    grid-template-columns: 1fr;
-  }
-
   .container {
     max-width: 100%;
   }
