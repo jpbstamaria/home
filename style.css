@@ -1,0 +1,188 @@
+:root {
+  --primary-dark: #efb803;
+  --primary-light: #660000;
+  --primary-header: #330000;
+  --neutral-bg: #b4b4b4;
+  --neutral-card: #c8c8c8;
+  --neutral-border: #969696;
+  --neutral-text: #323232;
+  --footer-bg: #323232;
+  --note-bg: rgba(255, 255, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  background-color: var(--neutral-bg);
+  color: var(--neutral-text);
+  line-height: 1.5;
+}
+
+/* Header & Banner */
+header {
+  background-color: var(--primary-light);
+  color: var(--neutral-card);
+  padding: 2rem;
+  border-bottom: 5px solid var(--primary-dark);
+}
+
+header h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+header .subtitle {
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+header .department {
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: var(--primary-header);
+  padding: 0.8rem 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--neutral-card);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--primary-dark);
+}
+
+/* Main Layout Grid */
+.container {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1.02fr;
+  gap: 1.5rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card Components */
+.card {
+  background-color: var(--neutral-card);
+  border: 2px solid var(--neutral-border);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.card-title {
+  color: var(--primary-light);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-divider {
+  border: none;
+  border-top: 2px solid var(--neutral-border);
+  margin: 0.5rem 0 1.2rem 0;
+}
+
+.card a {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Image Card Styling */
+.profile-card {
+  text-align: center;
+}
+
+.profile-card img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.profile-card figcaption {
+  font-weight: bold;
+  color: var(--neutral-text);
+}
+
+/* Announcement Notes */
+.note {
+  background-color: var(--note-bg);
+  border-left: 5px solid var(--primary-dark);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.note:last-child {
+  margin-bottom: 0;
+}
+
+.note-date {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Code / Monospace */
+.mono {
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-bg);
+  color: #ffffff;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+footer h3 {
+  color: var(--primary-dark);
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .copyright {
+  font-size: 0.85rem;
+  color: var(--neutral-card);
+}
