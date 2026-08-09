@@ -145,7 +145,7 @@ nav a.active {
       border-top: 4px solid var(--primary-light);
       border-radius: 6px;
       padding: 1.5rem;
-      background-color: var(--neutral-bg);
+      background-color: var(--neutral-card);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -166,7 +166,7 @@ nav a.active {
 
 .course-code {
       display: inline-block;
-      background-color: var(--neutral-bg);
+      background-color: var(--primary-dark);
       color: var(--primary-header);
       font-weight: 700;
       font-size: 0.8rem;
@@ -188,6 +188,23 @@ nav a.active {
       color: var(--neutral-text);
       margin-bottom: 1.25rem;
       flex-grow: 1;
+    }
+
+.btn {
+      display: inline-block;
+      background-color: var(--primary-light);
+      color: white;
+      padding: 0.55rem 1.1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-align: center;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-light);
     }
 
 /* Announcement Notes */
