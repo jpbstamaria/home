@@ -31,7 +31,8 @@ header {
   color: var(--neutral-card);
   padding: clamp(0.75rem, 2vw, 1.5rem);
   border-bottom: 5px solid var(--primary-dark);
-  min-height: 150px;
+  min-height: auto;
+  height: auto !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
